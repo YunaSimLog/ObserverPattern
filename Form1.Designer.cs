@@ -35,8 +35,8 @@
             this.pnlColor = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnColor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnShowForm2 = new System.Windows.Forms.Button();
+            this.btnShowForm3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -98,36 +98,39 @@
             this.btnColor.TabIndex = 5;
             this.btnColor.Text = "색상 편집";
             this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
-            // button1
+            // btnShowForm2
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Font = new System.Drawing.Font("굴림", 9F);
-            this.button1.Location = new System.Drawing.Point(14, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Form2 보이기";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnShowForm2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnShowForm2.Font = new System.Drawing.Font("굴림", 9F);
+            this.btnShowForm2.Location = new System.Drawing.Point(14, 158);
+            this.btnShowForm2.Name = "btnShowForm2";
+            this.btnShowForm2.Size = new System.Drawing.Size(111, 34);
+            this.btnShowForm2.TabIndex = 6;
+            this.btnShowForm2.Text = "Form2 보이기";
+            this.btnShowForm2.UseVisualStyleBackColor = true;
+            this.btnShowForm2.Click += new System.EventHandler(this.btnShowForm2_Click);
             // 
-            // button2
+            // btnShowForm3
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("굴림", 9F);
-            this.button2.Location = new System.Drawing.Point(131, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 34);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Form3 보이기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnShowForm3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowForm3.Font = new System.Drawing.Font("굴림", 9F);
+            this.btnShowForm3.Location = new System.Drawing.Point(131, 158);
+            this.btnShowForm3.Name = "btnShowForm3";
+            this.btnShowForm3.Size = new System.Drawing.Size(96, 34);
+            this.btnShowForm3.TabIndex = 7;
+            this.btnShowForm3.Text = "Form3 보이기";
+            this.btnShowForm3.UseVisualStyleBackColor = true;
+            this.btnShowForm3.Click += new System.EventHandler(this.btnShowForm3_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 245);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnShowForm3);
+            this.Controls.Add(this.btnShowForm2);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.pnlColor);
             this.Controls.Add(this.lbNote);
@@ -151,8 +154,8 @@
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnColor;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnShowForm2;
+        private System.Windows.Forms.Button btnShowForm3;
     }
 }
 
