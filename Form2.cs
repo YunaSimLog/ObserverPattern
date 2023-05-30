@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ObserverPattern
 {
-    public partial class MainForm : Form
+    public partial class Form2 : Form
     {
-        public MainForm()
+        public Form2()
         {
             InitializeComponent();
         }
