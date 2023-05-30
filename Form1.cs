@@ -49,15 +49,13 @@ namespace ObserverPattern
 
         private void btnShowForm2_Click(object sender, EventArgs e)
         {
-            m_ObserSub.Update();
-
+            UpdateData();
             m_Form2.Show();
         }
 
         private void btnShowForm3_Click(object sender, EventArgs e)
         {
-            m_ObserSub.Update();
-
+            UpdateData();
             m_Form3.Show();
         }
 
@@ -68,6 +66,11 @@ namespace ObserverPattern
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void UpdateData()
         {
             m_SinglePat.m_strNote = tbNote.Text;
             m_SinglePat.m_pnlColor = pnlColor.BackColor;
