@@ -37,7 +37,7 @@ namespace ObserverPattern
             // 
             // pnlColor
             // 
-            this.pnlColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlColor.BackColor = System.Drawing.Color.Linen;
             this.pnlColor.Location = new System.Drawing.Point(12, 24);
@@ -61,11 +61,10 @@ namespace ObserverPattern
             this.lbNote.AutoSize = true;
             this.lbNote.Location = new System.Drawing.Point(12, 9);
             this.lbNote.Name = "lbNote";
-            this.lbNote.Size = new System.Drawing.Size(57, 12);
+            this.lbNote.Size = new System.Drawing.Size(0, 12);
             this.lbNote.TabIndex = 6;
-            this.lbNote.Text = "문자 입력";
             // 
-            // Form2
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,8 +73,8 @@ namespace ObserverPattern
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlColor);
             this.MinimumSize = new System.Drawing.Size(136, 169);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "Form3";
+            this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();
 

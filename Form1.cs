@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace ObserverPattern
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IListenr
     {
+        ObserverSubject m_ObserSub;
+        TestSingletonPattern m_SinglePat; // 노트, 색상 정보
+
         Form2 m_Form2;
         Form3 m_Form3;
 
@@ -19,8 +22,18 @@ namespace ObserverPattern
         {
             InitializeComponent();
 
+            m_ObserSub = new ObserverSubject();
+            m_SinglePat = TestSingletonPattern.Instance;
+
             m_Form2 = new Form2();
             m_Form3 = new Form3();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            m_ObserSub.Attach(this);
+            m_ObserSub.Attach(m_Form2);
+            m_ObserSub.Attach(m_Form3);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -36,12 +49,30 @@ namespace ObserverPattern
 
         private void btnShowForm2_Click(object sender, EventArgs e)
         {
+            m_ObserSub.Update();
+
             m_Form2.Show();
         }
 
         private void btnShowForm3_Click(object sender, EventArgs e)
         {
+            m_ObserSub.Update();
+
             m_Form3.Show();
+        }
+
+        public void NotifyAction()
+        {
+            tbNote.Text = m_SinglePat.m_strNote;
+            pnlColor.BackColor = m_SinglePat.m_pnlColor;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            m_SinglePat.m_strNote = tbNote.Text;
+            m_SinglePat.m_pnlColor = pnlColor.BackColor;
+
+            m_ObserSub.Update();
         }
     }
 }

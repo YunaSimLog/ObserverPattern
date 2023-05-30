@@ -59,9 +59,8 @@
             this.lbNote.AutoSize = true;
             this.lbNote.Location = new System.Drawing.Point(12, 9);
             this.lbNote.Name = "lbNote";
-            this.lbNote.Size = new System.Drawing.Size(57, 12);
+            this.lbNote.Size = new System.Drawing.Size(0, 12);
             this.lbNote.TabIndex = 6;
-            this.lbNote.Text = "문자 입력";
             // 
             // Form2
             // 
@@ -74,6 +73,7 @@
             this.MinimumSize = new System.Drawing.Size(136, 169);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
